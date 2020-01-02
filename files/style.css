@@ -1,0 +1,71 @@
+.cards {
+  margin: 30px; margin-left: 5px; margin-right: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#btn0 { background-image:url('/files/vocabulary.jpg'); }
+#btn1 { background-image:url('/files/songsBook.jpg'); }
+#btn2 { background-image:url('/files/climbing.jpg'); }
+#btn3 { background-image:url('/files/travel.jpg'); }
+#btn4 { background-image:url('/files/code.jpg'); }
+
+.cards button {
+  margin: 5px;
+  height: 200px; width: 140px; min-width: 140px; max-width: 140px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px gray;
+  background-size: 100%; /* To fill the dimensions of container (button), or */
+  /* background-size: 40px auto; /* to specify dimensions explicitly */ */
+}
+
+.cards button:hover {
+  position: relative;
+  top: -5px;
+  box-shadow: 5px 5px 10px gray;
+  border: 2px solid black;
+  width: 220px;
+  height: 210px;
+}
+
+.lastContent {
+  width: 100%;
+  position: fixed;
+  border-top: 2px solid black;
+  top: 350px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .cards {
+    display: block;
+  }
+  .cards button {
+    margin: 10px;
+    margin-left: auto; margin-right: auto;
+    display: block;
+    height: 100px; width: 300px; min-width: 300px; max-width: 300px;
+  }
+  .cards button:hover {
+    position: static;
+    width: 310px;min-width: 310px; max-width: 310px;
+    height: 100px;
+  }
+  #btn0 { background-image:url('/files/vocabulary_small.jpg'); }
+  #btn1 { background-image:url('/files/songsBook_small.jpg'); }
+  #btn2 { background-image:url('/files/travel_small.jpg'); }
+  #btn3 { background-image:url('/files/climbing_small.jpg'); }
+  #btn4 { background-image:url('/files/code_small.jpg'); }
+
+  .lastContent {
+    top: 600px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .cards {
+    margin: 0;
+  }
+
+}
